@@ -35,25 +35,25 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4| Linux            |
-| Web 1     |  Webserver | 10.0.0.9   |                  |
-| Web 2     | Webserver | 10.0.0.10           |                  |
-| Web 3    |  Webserver |  10.0.0.11          |                  |
-
+| Web 1     |  Webserver | 10.0.0.9   | Linux          |
+| Web 2     | Webserver | 10.0.0.10    |   Linux         |
+| Web 3    |  Webserver |  10.0.0.11    | Linux          |
+| Elk Server| Monitoring| 10.1.0.4| Linux|
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jumpbox provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- 5601 Kibana Port
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the jumpbox provisioner.
+-My local machine can only access the ELK VM.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
+| Jump Box | Yes/No              | My IP Address   |
 |          |                     |                      |
 |          |                     |                      |
 
