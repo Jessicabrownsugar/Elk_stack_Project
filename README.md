@@ -53,19 +53,25 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | My IP Address   |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes             | My IP Address   |
+|  Web 1     |      No       |     10.1.0.4                 |
+|    Web 2       |  No          |      10.1.0.4                |
+|Web 3	| No	|	10.1.0.4|
+| Elk Server| No| 10.1.0.4|
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because
+-  it can be ran from the command line without configuration files for simple tasks, such as making sure a service is running, or to trigger updates or reboots.
+
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+
+- Installs docker.io
+- Installs pip3
+- Installs Docker Python Module
+- Increases virtual memory
+- Downloads and launches a docker
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -73,7 +79,11 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+|Name | IP Addresses|
+|Web 1|10.0.0.9|
+|Web 2|10.0.0.10|
+|Web 3|10.0.0.11|
+
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
