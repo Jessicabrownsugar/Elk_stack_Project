@@ -49,7 +49,7 @@ Only the jumpbox provisioner machine can accept connections from the Internet. A
 - my local IP Address
 
 Machines within the network can only be accessed by the jumpbox provisioner.
--My local machine can only access the ELK VM.
+- My local machine can only access the ELK VM.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -91,8 +91,8 @@ This ELK server is configured to monitor the following machines:
 
 
 We have installed the following Beats on these machines:
-- Web 1, Web 2, Web 3, Elk Server
-- The ELK Stack Installed are: FileBeat and MetricBeat
+- filebeat
+- metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat - collects data about the file system
@@ -103,9 +103,15 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-- Copy the playbook file to Ansible .
-- Update the hosts file to include webserver and elk. Edit hosts file to update and to make Ansible run the playbook on a specific machine, and specify which machine to install the ELK server on versus which to install Filebeat.
-- Run the playbook, and navigate to Kibana to check that the installation worked as expected.
+- Copy the playbook file to /etc/ansible .
+- Update the hosts file to include webserver and elk. 
+- In the hosts file, update the IP addresses of the machines that you want Elk and Beats to be installed on.
+- Run the playbook with these command: 
+  $ ansible-playbook install_elk.yml 
+  $ ansible-playbook install_filebeat.yml 
+  $ ansible-playbook install_metricbeat.yml
+
+- Navigate to Kibana http://my.VM.public.ip:5601/app/kibana to check that the installation worked as expected.
 
 
 - _Which file is the playbook? Where do you copy it?_
@@ -113,7 +119,7 @@ SSH into the control node and follow the steps below:
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do you specify which machine to install the ELK server on versus which to install Filebeat on?
 	The hosts file should be updated in order to run the playbook on a specific machine. 
-	You can specify which machine to use by adding the private IP Addresses of the machines wish to install ELK or Filebeat on.
+	You can specify which machine to use by adding the private IP Addresses of the machines you wish to install ELK or Filebeat on.
 
 Add the following to your hosts file:
 
