@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jumpbox provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 5601 Kibana Port
+- my local IP Address
 
 Machines within the network can only be accessed by the jumpbox provisioner.
 -My local machine can only access the ELK VM.
@@ -56,8 +56,8 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes             | My IP Address   |
-|  Web 1     |      No       |     10.1.0.4                 |
-|    Web 2       |  No          |      10.1.0.4                |
+|  Web 1     |      No       |     10.1.0.4         |
+|    Web 2   |  No          |      10.1.0.4        |
 |Web 3	| No	|	10.1.0.4|
 | Elk Server| No| 10.1.0.4|
 
@@ -77,7 +77,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker ps1](https://user-images.githubusercontent.com/58923185/153698029-12a0b3a7-fc6e-4a8f-9d77-60296753f992.PNG)
+![docker ps1](Images/docker ps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
