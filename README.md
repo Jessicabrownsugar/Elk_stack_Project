@@ -130,5 +130,5 @@ Add the following to your hosts file:
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 
-http://[my.VM.public.ip]:5601/app/kibana
+http://my.VM.public.ip:5601/app/kibana
 
