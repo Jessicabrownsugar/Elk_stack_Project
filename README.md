@@ -123,13 +123,7 @@ SSH into the control node and follow the steps below:
 
 Add the following to your hosts file:
 
-[webservers]
-[your.VM.IP] ansible_python_interpreter=/usr/bin/python3	
-[your.VM.IP] ansible_python_interpreter=/usr/bin/python3
-
-[elk]
-[your_VM_IP] ansible_python_interpreter=/usr/bin/python3
-
+![hostfile](https://github.com/Jessicabrownsugar/Elk_stack_Project/blob/main/Images/Updatehostsfile.PNG)
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
