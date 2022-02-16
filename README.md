@@ -134,6 +134,6 @@ Add the following to your hosts file:
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 
-http://[your.VM.IP]:5601/app/kibana
+http://[my.VM.public.ip]:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
