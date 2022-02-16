@@ -107,9 +107,9 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include webserver and elk. 
 - In the hosts file, update the IP addresses of the machines that you want Elk and Beats to be installed on.
 - Run the playbook with these command: 
-  $ ansible-playbook install_elk.yml 
-  $ ansible-playbook install_filebeat.yml 
-  $ ansible-playbook install_metricbeat.yml
+  - $ ansible-playbook install_elk.yml 
+  - $ ansible-playbook install_filebeat.yml 
+  - $ ansible-playbook install_metricbeat.yml
 
 - Navigate to Kibana http://my.VM.public.ip:5601/app/kibana to check that the installation worked as expected.
 
